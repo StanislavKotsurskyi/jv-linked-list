@@ -4,20 +4,10 @@ import java.util.List;
 
 public class MyLinkedList<T> implements MyLinkedListInterface<T> {
 
-    private class Node<T> {
-        private T value;
-        private Node<T> prev;
-        private Node<T> next;
-
-        public Node(T value) {
-            this.value = value;
-        }
-    }
-
     private int size;
+
     private Node<T> head;
     private Node<T> tail;
-
     @Override
     public void add(T value) {
         Node<T> newNode = new Node<>(value);
@@ -121,6 +111,16 @@ public class MyLinkedList<T> implements MyLinkedListInterface<T> {
     @Override
     public boolean isEmpty() {
         return size == 0;
+    }
+
+    private class Node<T> {
+        private T value;
+        private Node<T> prev;
+        private Node<T> next;
+
+        public Node(T value) {
+            this.value = value;
+        }
     }
 
     private Node<T> findNode(int index) {
