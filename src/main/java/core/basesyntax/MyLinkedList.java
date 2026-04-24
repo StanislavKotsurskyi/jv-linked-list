@@ -5,9 +5,9 @@ import java.util.List;
 public class MyLinkedList<T> implements MyLinkedListInterface<T> {
 
     private int size;
-
     private Node<T> head;
     private Node<T> tail;
+
     @Override
     public void add(T value) {
         Node<T> newNode = new Node<>(value);
